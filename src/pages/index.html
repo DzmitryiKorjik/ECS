@@ -3,80 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <title>Web DocsHub</title>
 </head>
 <body>
-      <header>
-          <nav>
-              <nav class="navbar bg-body-tertiary fixed-top">
-                  <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Web DocsHub</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                      <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                      </div>
-                      <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                          <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="project.html">Projets</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="teams.html">Groupes & Discussions</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="assistant.html">Assistatnt IA</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#">GitHub</a>
-                          </li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              References
-                            </a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="blog/html.html">HTML</a></li>
-                              <li><a class="dropdown-item" href="blog/css.html">CSS</a></li>
-                              <li><a class="dropdown-item" href="blog/javaScripr.html">JavaScripr</a></li>
-                              <li><a class="dropdown-item" href="blog/react.html">React</a></li>
-                              <li><a class="dropdown-item" href="blog/python.html">Python</a></li>
-                              <li><a class="dropdown-item" href="blog/PHP.html">PHP</a></li>
-                              <li><a class="dropdown-item" href="blog/SQL.html">SQL</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                        <form class="d-flex mt-3" role="search">
-                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                      </div>
+    <div class="sidebar">
+        <div class="sidebar__logo">
+            DevCollab
+        </div>
+        <ul class="sidebar__menu">
+            <li class="sidebar__item"><a href="index.html"><div class="sidebar__item_link"><img src="../img/home.png" class="sidebar__item_img">Accueil</div></a></li>
+            <li class="sidebar__item"><a href="projets.html"><div class="sidebar__item_link"><img src="../img/project-management.png" class="sidebar__item_img">Projets</div></a></li>
+            <li class="sidebar__item"><a href="groupes.html"><div class="sidebar__item_link"><img src="../img/chat-bubble.png" class="sidebar__item_img">Groupes & Discussions</div></a></li>
+            <li class="sidebar__item"><a href="ai.html"><div class="sidebar__item_link"><img src="../img/robo.png" class="sidebar__item_img">Assistance AI</div></a></li>
+            <li class="sidebar__item"><a href="documentation.html"><div class="sidebar__item_link"><img src="../img/book.png" class="sidebar__item_img">Documentation</div></a></li>
+        </ul>
+        <div class="sidebar__profil">
+            <div class="sidebar__profil_img">
+                <img src="../img/profil.png" class="sidebar__profil_img">
+            </div>
+            <div class="sidebar__profil_text">
+                <p class="sidebar__profil_title">
+                    Profil
+                </p>
+                <p class="sidebar__prifil_subtitle">
+                    Parametres
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="mainwindow">
+        <div class="head">
+            <div class="head__leftpart"><div class="head__logo">DevCollab</div>
+            <div class="head__search">
+                <form action="/search" method="get">
+                    <input type="search" class="head__search_form" placeholder="Rechercher..." pattern="[0-9]*">
+                </form>
+            </div></div>
+            <div class="head__rightpart">
+                <div class="head__alarm">
+                    <a href="notification.html"><img src="../img/notification-bell.png" alt=""></a>
+                </div>
+                <div class="head__message">
+                    <a href="message.html"><img src="../img/chat-bubble.png" alt=""></a>
+                </div>
+                <div class="head__profil">
+                    <a href="message.html"><img src="../img/profil.png" class="head__message_img"></a>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <h1 class="main__title">Bienvenur, Quentin Faber</h1>
+            <h2 class="main__subtitle">Votre platforme collaborative d'apprentisage et d'entraide</h2>
+            <div class="main__topbar">
+                <div class="main__topbar_item">
+                    <div class="main__topbar_img">
+                        <img src="../img/analytics.png" alt="project actif" width="60px">
                     </div>
-                  </div>
-                </nav>
-          </nav>
-      </header>
-
-    <div class="container">
-        <main>
-            <section>
-                <h1>Bienvenue sur notre site!</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet arcu ac justo facilisis bibendum. Quisque tristique, ipsum sed varius consectetur, mauris nunc ullamcorper neque, vitae finibus dui felis vel neque. Sed vel neque euismod, ultricies felis sed, pulvinar justo. Vestibulum sed ex vel nunc tempus mollis. Nullam consectetur, diam et cursus pulvinar, neque nisi bibendum justo, non laoreet purus velit et turpis.</p>
-            </section>
-        </main>
+                    <div class="main__topbar_text">
+                        <p class="main__topbar_title">
+                            Project Actifs
+                        </p>
+                        <p class="main__topbar_subtitle">
+                            25
+                        </p>
+                    </div>
+                </div>
+                <div class="main__topbar_item">
+                    <div class="main__topbar_img">
+                        <img src="../img/teamwork.png" alt="project actif" width="60px">
+                    </div>
+                    <div class="main__topbar_text">
+                        <p class="main__topbar_title">
+                            Développeurs
+                        </p>
+                        <p class="main__topbar_subtitle">
+                            15
+                        </p>
+                    </div>
+                </div>
+                <div class="main__topbar_item">
+                    <div class="main__topbar_img">
+                        <img src="../img/cont.png" alt="project actif" width="60px">
+                    </div>
+                    <div class="main__topbar_text">
+                        <p class="main__topbar_title">
+                            Contributions
+                        </p>
+                        <p class="main__topbar_subtitle">
+                            1.2k
+                        </p>
+                    </div>
+                </div>
+                <div class="main__topbar_item">
+                    <div class="main__topbar_img">
+                        <img src="../img/fav.png" alt="project actif" width="60px">
+                    </div>
+                    <div class="main__topbar_text">
+                        <p class="main__topbar_title">
+                            Project Favoris
+                        </p>
+                        <p class="main__topbar_subtitle">
+                            89
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="main__corps">
+                <div class="main__principal">
+                    <h3 class="main__principal_title">Activités Récentes</h3>
+                    <div class="main__principal_item">
+                        <div class="main__principal_item_img"><img src="../img/next.png" alt=""></div>
+                        <div class="main__principal_item_title">Mise a jour du project React</div>
+                        <div class="main__principal_item_subtitle">Nouvelle version déployée</div>
+                        <div class="main__principal_item_time">il y a 5 minutes</div>
+                    </div> 
+                    <div class="main__principal_item">
+                        <div class="main__principal_item_img"><img src="../img/chat.png" alt=""></div>
+                        <div class="main__principal_item_title">Nouveau message dans HTML</div>
+                        <div class="main__principal_item_subtitle">Question sur les flexbox</div>
+                        <div class="main__principal_item_time">il y a 15 minutes</div>
+                    </div> 
+                    <div class="main__principal_item">
+                        <div class="main__principal_item_img"><img src="../img/file.png" alt=""></div>
+                        <div class="main__principal_item_title">Documen mise a jour</div>
+                        <div class="main__principal_item_subtitle">Guide JavaScript ES6+</div>
+                        <div class="main__principal_item_time">il y a 1 heure</div>
+                    </div> 
+                </div>
+                <div class="main__sidebar">
+                    <h3 class="main__event_title"><img src="../img/calendar.png" class="main__event_img">Evenements à venir</h3>
+                    <div class="main__event_item">
+                        <div class="main__event_sutitle">
+                            Workshop React
+                        </div>
+                        <div class="main__event_time">
+                            25/03/2024 à 14:00
+                        </div>
+                        <div class="main__event_text">
+                            12 participants
+                        </div>
+                    </div>    
+                    <div class="main__event_item">
+                        <div class="main__event_sutitle">
+                            Workshop React
+                        </div>
+                        <div class="main__event_time">
+                            25/03/2024 à 14:00
+                        </div>
+                        <div class="main__event_text">
+                            12 participants
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>    
     </div>
-    <div class="container">
-        <footer>
-            <p>&copy; 2024 - Tous droits réservés</p>
-        </footer>
-    </div>
-
-    <script src="js/script"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-</body>
 </html>
