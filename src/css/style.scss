@@ -57,14 +57,15 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.mainwindow {
+.mainpage {
+  margin-left: 200px;
+  background: linear-gradient(to bottom right, #4e73df, #1cc88a);
   flex-grow: 1;
 }
 
 /*Header*/
 
 .head {
-  margin-left: 200px;
   display: flex;
   background: #5b78a3;
   padding: 30px 155px;
@@ -81,10 +82,10 @@ body {
     display: flex;
   }
 
-  &__alarm, &__message {
-    padding: 0 30px 0 0;
+  &__profil, &__alarm, &__message {
+   
   }
-  
+
   &__message_img {
     width: 24px;
   }
@@ -125,11 +126,8 @@ body {
     font-size: 16px;
     padding: 12px 5px 12px 5px;
     &:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      color: #3f3f41;
       transition: all 0.3s ease;
-      border-radius: 5px;
-      padding: 5px;
     }    
     &_link {
       display: flex;
@@ -168,8 +166,6 @@ body {
 
 /*Partie cenral*/
 .main {
-  margin-left: 200px;
-  background: linear-gradient(to bottom right, #4e73df, #1cc88a);
   text-align: center;
   &__title {
     padding: 50px 0 0 0;
@@ -330,6 +326,34 @@ body {
         font-size: 13px;
         color: #9D9CA5;
       }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+ 
+  &__contacts {
+    &:hover {
+      color: #3f3f41;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__rights {
+    margin: 0 50px;
+    &:hover {
+      color: #3f3f41;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__aide {
+    &:hover {
+      color: #3f3f41;
+      transition: all 0.3s ease;
     }
   }
 }
