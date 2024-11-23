@@ -7,6 +7,30 @@
     <title>Project</title>
 </head>
 <body> 
-    
+    <section class="header">
+        <div class="header__title">DevCollad</div>
+        <div class="header__search">
+            <form class="header__search-form" action="/search" method="get" role="search" aria-label="Site search">
+                <input
+                  class="header__input-search"
+                  type="search"
+                  name="rechercher"
+                  id="search-input"
+                  placeholder="Rechercher..."
+                  aria-label="Recherche">
+            </form>
+        </div>
+        <div class="header__items">
+            <div class="header__items-alarm">
+                <a href="./libs/notification.html"><img src="../img/notification-bell.png" alt="notification"></a>
+            </div>
+            <div class="header__items-message">
+                <a href="./libs/message.html"><img src="../img/chat-bubble.png" alt="chat"></a>
+            </div>
+            <div class="header__items-profil">
+                <a href="./libs/profil.html"><img src="../img/profil.png" alt="profil"></a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
