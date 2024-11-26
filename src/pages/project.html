@@ -13,14 +13,14 @@
                 <img src="../icons/menu-alt-2-svgrepo-com.svg" alt="menu">
             </div>
             <ul class="header__dropdown-menu" style="display: none;">
-                <li><a class="header__dropdown-item" href="./index.html" target="_blank">Accueil</a></li>
-                <li><a class="header__dropdown-item" href="./teams.html" target="_blank">Groupes & Discussions</a></li>
-                <li><a class="header__dropdown-item" href="./assistant.html" target="_blank">Assistance AI</a></li>
-                <li><a class="header__dropdown-item" href="./documentation.html" target="_blank">Documentation</a></li>
+                <li><img src="../img/home.png" alt="#"><a class="header__dropdown-item" href="./index.html" target="_blank">Accueil</a></li>
+                <li><img src="../img/chat-bubble.png" alt="#"><a class="header__dropdown-item" href="./teams.html" target="_blank">Groupes & Discussions</a></li>
+                <li><img src="../img/robo.png" alt="#"><a class="header__dropdown-item" href="./assistant.html" target="_blank">Assistance AI</a></li>
+                <li><img src="../img/book.png" alt="#"><a class="header__dropdown-item" href="./documentation.html" target="_blank">Documentation</a></li>
             </ul>
         </div>
         <div class="header__title">
-            <img src="../icons/web-development-svgrepo-com.svg" alt="DevWeb">
+            <img class="header__title-icon" src="../icons/web-development-svgrepo-com.svg" alt="DevWeb">
             DevCollad</div>
        
         <div class="header__search">
@@ -46,6 +46,35 @@
             </div>
         </div>
     </section>
+    <div class="container">
+        <section class="wrapper">
+            <div class="wrapper__content">
+                <form class="wrapper__content-form" action="input" method="post">
+                    <input class="wrapper__content-form-search" type="text" id="search" placeholder="Search..." >
+                    <div class="wrapper__content-form-btnGroupe">
+                        <button class="wrapper__content-form-btn1" type="button">
+                            <span class="wrapper__content-form-btn-btnContent">Add file</span>
+                            <span class="wrapper__content-form-btn-trailingAction">
+                                <img src="../icons/dropdown-svgrepo-com.svg" alt="dropdown">
+                            </span>
+                        </button>
+                        <button class="wrapper__content-form-btn2" type="button">
+                            <span class="wrapper__content-form-btn-btnContent">&lt&nbsp&gt&nbspcode</span>
+                            <span class="wrapper__content-form-btn-trailingAction">
+                                <img src="../icons/dropdown-svgrepo-com.svg" alt="dropdown">
+                            </span>
+                        </button>
+                    </div>
+                </form>
+                <div class="wrapper__content-form-repo">
+                    <div class="wrapper__content-form-repo-list"  id="repo-list">
+                        <!-- Les fichiers et dossiers seront téléchargés ici -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
 
     <script src="../js/modules/project.js"></script>
 </body>
