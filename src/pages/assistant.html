@@ -5,129 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assistant AI</title>
     <link rel="stylesheet" href="../css/ai_style.css" />
-    <style>
-      .return-button {
-        position: fixed;
-        top: 20px;
-        left: 200px;
-        background-color: #ffffff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        font-size: 16px;
-        text-decoration: none;
-        color: #333;
-        transition: background-color 0.3s ease;
-      }
-      .return-button:hover {
-        background-color: #f0f0f0;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/header.scss">
+    <script src="../js/script.js"></script>
   </head>
   <body>
-    <!-- <div class="return-button">
-      <a href="settings.html">Retour aux paramètres</a>
-    </div> -->
-    <div class="sidebar">
-      <div class="sidebar__logo">DevCollab</div>
-      <ul class="sidebar__menu">
-        <li class="sidebar__item">
-          <a href="index.html">
-            <div class="sidebar__item_link">
-              <img src="../img/home.png" class="sidebar__item_img" />Accueil
-            </div>
-          </a>
-        </li>
-        <li class="sidebar__item">
-          <a href="projets.html">
-            <div class="sidebar__item_link">
-              <img
-                src="../img/project-management.png"
-                class="sidebar__item_img"
-              />Projets
-            </div>
-          </a>
-        </li>
-        <li class="sidebar__item">
-          <a href="groupes.html">
-            <div class="sidebar__item_link">
-              <img
-                src="../img/chat-bubble.png"
-                class="sidebar__item_img"
-              />Groupes & Discussions
-            </div>
-          </a>
-        </li>
-        <li class="sidebar__item">
-          <a href="ai.html">
-            <div class="sidebar__item_link">
-              <img src="../img/robo.png" class="sidebar__item_img" />Assistance
-              AI
-            </div>
-          </a>
-        </li>
-        <li class="sidebar__item">
-          <a href="documentation.html">
-            <div class="sidebar__item_link">
-              <img
-                src="../img/book.png"
-                class="sidebar__item_img"
-              />Documentation
-            </div>
-          </a>
-        </li>
-      </ul>
-      <div class="sidebar__profil">
-        <div class="sidebar__profil_img">
-          <img
-            src="../icons/profile-round-1345-svgrepo-com.svg"
-            class="sidebar__profil_img"
-          />
-        </div>
-        <div class="sidebar__profil_text">
-          <p class="sidebar__profil_title">Profil</p>
-          <p class="sidebar__profil_subtitle">Paramètres</p>
-        </div>
-      </div>
-    </div>
+    <!-- menu de gauche -->
+    <section id="sidebar"></section>
+
+        <!-- header -->
+    <div id="header" style="margin-left: 200px;"></div>
+
     <div class="mainwindow">
-      <div class="head">
-        <div class="head__leftpart">
-          <div class="head__logo">DevCollab</div>
-          <div class="head__search">
-            <form action="/search" method="get">
-              <input
-                type="search"
-                class="head__search_form"
-                placeholder="Rechercher..."
-              />
-            </form>
-          </div>
-        </div>
-        <div class="head__rightpart">
-          <div class="head__alarm">
-            <a href="notification.html">
-              <img src="../icons/notification-svgrepo-com.svg" alt="" />
-            </a>
-          </div>
-          <div class="head__message">
-            <a href="message.html">
-              <img src="../icons/message-circle-plus-svgrepo-com.svg" alt="" />
-            </a>
-          </div>
-          <div class="head__profil">
-            <a href="profil.html">
-              <img
-                src="../icons/profile-round-1345-svgrepo-com.svg"
-                class="head__message_img"
-              />
-            </a>
-          </div>
-          <div class="settings-icon" id="settings-icon">
-            <img src="../img/setting.png" alt="Settings" />
-          </div>
-        </div>
-      </div>
       <div id="chatgpt" class="assistant__section">
         <button class="assistant__back">Retour</button>
         <h3>ChatGPT</h3>
