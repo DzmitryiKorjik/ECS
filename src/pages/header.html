@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+<body>
+    <header class="head">
+        <div class="head__leftpart">
+            <div class="burger">
+                <span class="burger__ligne"></span>
+            </div>
+            <div class="head__logo"><img src="../icons/web-development-svgrepo-com.svg" alt="">DevCollab</div>
+            <div class="head__search">
+                <form action="/search" method="get">
+                    <input type="search" class="head__search_form" placeholder="Rechercher..." pattern="[0-9]*">
+                </form>
+            </div>
+        </div>
+        <div class="head__rightpart">
+            <div class="head__alarm">
+                <a href="notification.html"><img src="../icons/notification-svgrepo-com.svg" alt="notification"></a>
+            </div>
+            <div class="head__message">
+                <a href="message.html"><img src="../icons/message-circle-plus-svgrepo-com.svg" alt="chat"></a>
+            </div>
+            <div class="head__profil">
+                <a href="message.html"><img src="../icons/profile-round-1345-svgrepo-com.svg" alt="profil" class="head__message_img"></a>
+            </div>
+        </div>
+    </header>
+    <script src="../js/script.js"></script>
+    <script src="../js/burger.js"></script>
+</body>
+</html>

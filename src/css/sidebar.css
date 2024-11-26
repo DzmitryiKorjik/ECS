@@ -1,0 +1,136 @@
+.sidebar {
+  height: 100vh;
+  width: 200px;
+  background: rgba(47, 46, 51, 0.6117647059);
+  color: #DAD5D5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  -webkit-backdrop-filter: blur(22px);
+          backdrop-filter: blur(22px);
+  /*Sidebar menu*/
+  /*Sidebar ligne de menu*/
+  /*Sidebar profil*/
+}
+.sidebar__logo {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 32px 50px;
+}
+.sidebar__menu {
+  padding: 0 0 0 17px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+}
+.sidebar__item {
+  font-size: 16px;
+  padding: 12px 5px 12px 5px;
+}
+.sidebar__item:hover {
+  color: #3f3f41;
+  transition: all 0.3s ease;
+}
+.sidebar__item_link {
+  display: flex;
+  align-items: middle;
+  font-size: 14px;
+}
+.sidebar__item_img {
+  margin: 0 5px 0 0;
+  width: 16px;
+  height: 16px;
+}
+.sidebar__profil {
+  background: #414653;
+  height: 50px;
+  padding: 5px 0 5px 15px;
+  display: flex;
+  align-items: center;
+}
+.sidebar__profil_img {
+  margin: 0 15px 0 0;
+}
+.sidebar__profil_title {
+  font-size: 14px;
+}
+.sidebar__profil_subtitle {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar {
+    left: -200px;
+  }
+  .sidebar__logo {
+    font-size: 22px;
+    font-weight: 500;
+    left: 50px;
+    position: relative;
+  }
+  .sidebar__item_link {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .sidebar__item_img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .sidebar.active {
+    width: 300px;
+    left: 0px;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+  .sidebar__profil {
+    height: 80px;
+    align-items: center;
+  }
+  .sidebar__profil_text {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .sidebar__profil_title {
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar {
+    left: -200px;
+  }
+  .sidebar__logo {
+    font-size: 22px;
+    font-weight: 500;
+    left: 50px;
+    position: relative;
+  }
+  .sidebar__item_link {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .sidebar__item_img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+  }
+  .sidebar.active {
+    width: 300px;
+    left: 0px;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+  .sidebar__profil {
+    height: 80px;
+    align-items: center;
+  }
+  .sidebar__profil_text {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .sidebar__profil_title {
+    font-size: 25px;
+    font-weight: 500;
+  }
+}/*# sourceMappingURL=sidebar.css.map */

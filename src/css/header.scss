@@ -1,0 +1,131 @@
+.head {
+  display: flex;
+  background: #5b78a379;
+  padding: 30px 155px;
+  justify-content: space-between;
+  &__logo {
+    display: flex;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 30px 0 0;
+  }
+
+  &__rightpart, &__leftpart {
+    display: flex;
+  }
+
+  &__alarm, &__message {
+    padding: 0 30px 0 0;
+  }
+
+  &__search_form {
+    border-radius: 10px;
+    border: #9D9CA5;
+    padding: 0 0 0 12px;
+  }
+}
+
+.burger {
+  display: none;
+  position: relative;
+  top: 13px;
+  left: -15px;
+  height: 2px;
+  width: 20px;
+  background: #9d9ca5;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background: #9d9ca5;
+    transition: transform 0.3s ease, top 0.3s ease;
+  }
+
+  &::before {
+    top: -5px;
+  }
+
+  &::after {
+    top: 5px;
+  }
+
+  &.active {
+    height: 0px;
+  }
+
+  &.active::before {
+    top: 3px;
+    left: 0;
+    transform: rotate(45deg);
+    background: #D9D8DD;
+    transition: all 0.3s ease;
+  }
+
+  &.active::after {
+    top: 3px;
+    left: 0;
+    transform: rotate(-45deg);
+    background: #D9D8DD;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1325px) {
+  .head {
+    padding: 30px 80px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .head {
+    padding: 30px 80px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .head {
+    padding: 30px 80px;
+  }
+
+  .burger {
+    display: block;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .head {
+    padding: 20px 50px;
+    &__search {
+      display: none;
+    }
+  }
+
+  .burger {
+    display: block;
+    z-index: 2;
+    &.active {
+      height: 0px;
+    }
+  
+    &.active::before {
+      top: 13px;
+    }
+  
+    &.active::after {
+      top: 13px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .head {
+    &__search {
+      display: none;
+    }
+  }
+}
