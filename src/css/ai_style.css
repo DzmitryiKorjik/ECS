@@ -15,7 +15,7 @@
 
 /* Style de base */
 body {
-  background-image: url("../img/bg.webp"); /* Chemin vers l'image */
+  background-image: url("../img/ecf_body3.webp"); /* Chemin vers l'image */
   background-size: cover; /* L'image prend tout l'écran */
   background-repeat: no-repeat; /* Pas de répétition de l'image */
   background-position: center; /* Centrage de l'image */
