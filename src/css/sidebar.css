@@ -3,9 +3,16 @@
   width: 200px;
   background: rgba(47, 46, 51, 0.6117647059);
   color: #DAD5D5;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: fixed;
   -webkit-backdrop-filter: blur(22px);
           backdrop-filter: blur(22px);
@@ -20,8 +27,11 @@
 }
 .sidebar__menu {
   padding: 0 0 0 17px;
-  flex-grow: 1;
-  flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .sidebar__item {
   font-size: 16px;
@@ -29,11 +39,16 @@
 }
 .sidebar__item:hover {
   color: #3f3f41;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .sidebar__item_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: middle;
+  -webkit-box-align: middle;
+      -ms-flex-align: middle;
+          align-items: middle;
   font-size: 14px;
 }
 .sidebar__item_img {
@@ -45,8 +60,12 @@
   background: #414653;
   height: 50px;
   padding: 5px 0 5px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .sidebar__profil_img {
   margin: 0 15px 0 0;
@@ -81,11 +100,14 @@
     width: 300px;
     left: 0px;
     z-index: 1;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
   .sidebar__profil {
     height: 80px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .sidebar__profil_text {
     font-size: 20px;
@@ -119,11 +141,14 @@
     width: 300px;
     left: 0px;
     z-index: 1;
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
   }
   .sidebar__profil {
     height: 80px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .sidebar__profil_text {
     font-size: 20px;
@@ -133,4 +158,4 @@
     font-size: 25px;
     font-weight: 500;
   }
-}/*# sourceMappingURL=sidebar.css.map */
+}
