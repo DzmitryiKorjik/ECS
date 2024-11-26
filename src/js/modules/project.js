@@ -84,4 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
     displayRepoContents(repoData);
   })
+<<<<<<< HEAD
   .catch(error => console.error('Error fetching data:', error));
+=======
+  .catch(error => console.error('Error fetching data:', error));
+
+>>>>>>> 2fcd498f8fabf53916095b69495657aa4a7fde9a
