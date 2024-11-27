@@ -1,8 +1,8 @@
 "use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.header__dropdown-toggle');
-  const menu = document.querySelector('.header__dropdown-menu');
+  const toggle = document.querySelector('.wrapper__content-form-btn-trailingAction-dropdown');
+  const menu = document.querySelector('.wrapper__content-form-btn-trailingAction-dropdown-menu');
 
   toggle.addEventListener('click', (event) => {
       event.preventDefault(); 
