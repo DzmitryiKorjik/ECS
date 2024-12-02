@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/body2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центровка по вертикали */
+    min-height: 100vh;  /* Убедитесь, что высота учитывает весь экран */
+}
+
+
+
+
