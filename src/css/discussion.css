@@ -1,0 +1,9 @@
+* {
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/img/fond\ d\'écran\discussion.png);
+}
