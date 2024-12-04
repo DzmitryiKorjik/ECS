@@ -1,10 +1,31 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+    margin: 0;
+}
+
+img {
+  max-width: 100%;
+  margin: 0;
 }
 
 :root {
-	--color-light: #F5F5F7;
+    --color-light: #F5F5F7;
     --color-dark: #221F20;
 }
 
@@ -16,96 +37,116 @@ body {
   padding: 0;
 }
 
-.container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  text-align: center;
-  color: #333;
-}
-
-.file-upload {
+.title {
+  position: relative;
   display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+  color: var(--color-dark);
+  align-items:center;
+  justify-content: start;
+  img {
+    padding: 3px 0 0 10px;
+  }
+  .user__name {
+    font-weight: bold;
+    padding: 8px 0 0 10px;
+  }
+  .readme__title {
+    font-weight: bold;
+    padding: 6px 0 0 10px;
+  }
+  .file__btn {
+    position: absolute;
+    right: 25px;
+    margin-top: 6px;
+    width: 115px;
+    height: 35px;
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+    border-radius: 5px;
+    background: rgb(0, 201, 98);
+    text-align: center;
+    padding: 8px 0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    &:hover {
+      background: rgb(0, 177, 41);
+      color: var(--color-light);
+    }
+  }
 }
 
-.file-upload input {
-  display: none;
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  .project {
+    min-height: 450px;
+    border: 1px solid var(--color-light);
+    border-radius: 10px;
+    background: var(--color-light);
+  }
+  .readme {
+    margin-top: 25px;
+    min-height: 280px;
+    border: 1px solid var(--color-light);
+    border-radius: 10px;
+    background: var(--color-light);
+    .readme__content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .readme__content-descr {
+        font-size: large;
+        font-weight: bold;
+      }
+      .readme__btn {
+        margin-top: 15px;
+        width: 140px;
+        height: 40px;
+        color: var(--color-dark);
+        border: 1px solid var(--color-dark);
+        border-radius: 5px;
+        background: rgb(0, 201, 98);
+        text-align: center;
+        padding: 10px 0;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        &:hover {
+          background: rgb(0, 177, 41);
+          color: var(--color-light);
+        }
+      }
+      img {
+        margin-top: 25px;
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
-.file-upload button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.file-upload button:hover {
-  background-color: #0056b3;
-}
-
-#fileList {
+.file-list {
   list-style: none;
   padding: 0;
+  margin: 10px 0 0 0;
 }
 
-.file-item {
+.file-list li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-  padding: 10px;
-  background: #f9f9f9;
-  border-radius: 5px;
-  border: 1px solid #ddd;
 }
 
-.file-item span {
-  flex: 1;
-  margin-right: 10px;
-  word-break: break-word;
-}
-
-.file-item button {
-  padding: 5px 10px;
-  margin-left: 5px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.download-btn {
-  background-color: #28a745;
-  color: #fff;
-}
-
-.download-btn:hover {
-  background-color: #218838;
-}
-
-.edit-btn {
-  background-color: #ffc107;
-  color: #fff;
-}
-
-.edit-btn:hover {
-  background-color: #e0a800;
-}
-
-.delete-btn {
-  background-color: #dc3545;
-  color: #fff;
-}
-
-.delete-btn:hover {
-  background-color: #c82333;
+.file-list li span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 70%;
 }

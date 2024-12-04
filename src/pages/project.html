@@ -7,18 +7,46 @@
     <link rel="stylesheet" href="../css/project.css">
 </head>
 <body>
-    <div class="container">
-        <h1>File Manager</h1>
-        <div class="file-upload">
-            <input type="file" id="fileInput" />
-            <button id="addFileBtn">+ Add File</button>
+    <header>
+
+    </header>
+    <aside>
+
+    </aside>
+
+    <main>
+        <div class="wrapper">
+            <div class="project">
+                <div class="title">
+                    <img src="../icons/profile-round-1345-svgrepo-com.svg" alt="profile" class="icon">
+                    <div class="user__name">UserName</div>
+                    <button class="file__btn">Add file</button>
+                    <input type="file" id="fileInput" multiple style="display: none;">
+                </div>
+                <hr>
+                <ul class="file-list">
+                    <!-- Загруженные файлы будут отображаться здесь -->
+                </ul>
+            </div>
+            <div class="readme">
+                <div class="title">
+                    <img src="../icons/readme.svg" alt="readme">
+                    <div class="readme__title">README</div>
+                </div>
+                <hr>
+                <div class="readme__content">
+                    <img src="../icons/readme.svg" alt="readme">
+                    <div class="readme__content-descr">Add a README</div>
+                    <button class="readme__btn">Add a README</button>
+                </div>
+            </div>
         </div>
-        <ul id="fileList"></ul>
-    </div>
+        
+    </main>
 
+    <footer>
 
-
-
+    </footer>
 
     <script src="../js/modules/project.js"></script>
 </body>

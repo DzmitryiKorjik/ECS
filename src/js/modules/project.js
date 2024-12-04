@@ -1,57 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     const fileInput = document.getElementById('fileInput');
-    const addFileBtn = document.getElementById('addFileBtn');
-    const fileList = document.getElementById('fileList');
+    const fileBtn = document.querySelector('.file__btn');
+    const fileList = document.querySelector('.file-list');
 
-    addFileBtn.addEventListener('click', () => {
-        const file = fileInput.files[0];
-        if (!file) {
-            alert('Please select a file first!');
-            return;
-        }
-        addFileToList(file);
-        fileInput.value = ''; // Reset file input
+    // Открываем окно выбора файлов при клике на кнопку
+    fileBtn.addEventListener('click', () => {
+        fileInput.click();
     });
 
-    function addFileToList(file) {
-        const li = document.createElement('li');
-        li.classList.add('file-item');
+    // Обработка выбранных файлов
+    fileInput.addEventListener('change', (event) => {
+        const files = event.target.files;
 
-        const fileName = document.createElement('span');
-        fileName.textContent = file.name;
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
 
-        const downloadBtn = document.createElement('button');
-        downloadBtn.textContent = 'Download';
-        downloadBtn.classList.add('download-btn');
-        downloadBtn.addEventListener('click', () => {
-            const link = document.createElement('a');
-            link.href = URL.createObjectURL(file);
-            link.download = file.name;
-            link.click();
-        });
+            // Создаем элемент списка для файла
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <span>${file.name}</span>
+                <button class="delete-btn">Delete</button>
+            `;
 
-        const editBtn = document.createElement('button');
-        editBtn.textContent = 'Edit';
-        editBtn.classList.add('edit-btn');
-        editBtn.addEventListener('click', () => {
-            const newName = prompt('Edit file name:', file.name);
-            if (newName) {
-                fileName.textContent = newName;
-            }
-        });
+            // Добавляем обработчик для кнопки удаления
+            listItem.querySelector('.delete-btn').addEventListener('click', () => {
+                listItem.remove();
+            });
 
-        const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'Delete';
-        deleteBtn.classList.add('delete-btn');
-        deleteBtn.addEventListener('click', () => {
-            fileList.removeChild(li);
-        });
+            // Добавляем элемент в список
+            fileList.appendChild(listItem);
+        }
 
-        li.appendChild(fileName);
-        li.appendChild(downloadBtn);
-        li.appendChild(editBtn);
-        li.appendChild(deleteBtn);
-
-        fileList.appendChild(li);
-    }
+        // Очищаем fileInput, чтобы можно было загружать те же файлы повторно
+        fileInput.value = '';
+    });
 });
