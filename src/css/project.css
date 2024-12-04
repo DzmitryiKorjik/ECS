@@ -3,34 +3,109 @@
           box-sizing: border-box;
 }
 
-body {
-  background-image: url(../img/body2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100%;
+:root {
+	--color-light: #F5F5F7;
+    --color-dark: #221F20;
 }
 
-.main {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
+body {
+  background-color: var(--color-dark);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.file-upload {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
-  gap: 20px;
-  width: 60%;
-  margin-top: 25px;
-  border: 2px solid #ccc;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.file-upload input {
+  display: none;
+}
+
+.file-upload button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.file-upload button:hover {
+  background-color: #0056b3;
+}
+
+#fileList {
+  list-style: none;
+  padding: 0;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.file-item span {
+  flex: 1;
+  margin-right: 10px;
+  word-break: break-word;
+}
+
+.file-item button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.download-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.download-btn:hover {
+  background-color: #218838;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
 }
