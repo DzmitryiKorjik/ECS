@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-*::before, *::after {
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -22,12 +23,19 @@ body {
   font-family: Arial, sans-serif;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
@@ -45,7 +53,8 @@ a {
   color: rgb(75, 73, 73);
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -56,8 +65,8 @@ ul, ol {
   background: rgba(91, 120, 163, 0.4745098039);
   padding: 30px 155px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .head__logo {
   display: -webkit-box;
@@ -68,17 +77,19 @@ ul, ol {
   font-weight: 400;
   padding: 0 30px 0 0;
 }
-.head__rightpart, .head__leftpart {
+.head__rightpart,
+.head__leftpart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.head__alarm, .head__message {
+.head__alarm,
+.head__message {
   padding: 0 30px 0 0;
 }
 .head__search_form {
   border-radius: 10px;
-  border: #9D9CA5;
+  border: #9d9ca5;
   padding: 0 0 0 12px;
 }
 
@@ -91,7 +102,8 @@ ul, ol {
   width: 20px;
   background: #9d9ca5;
 }
-.burger::before, .burger::after {
+.burger::before,
+.burger::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -115,8 +127,8 @@ ul, ol {
   top: 3px;
   left: 0;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  background: #D9D8DD;
+  transform: rotate(45deg);
+  background: #d9d8dd;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -124,8 +136,8 @@ ul, ol {
   top: 3px;
   left: 0;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  background: #D9D8DD;
+  transform: rotate(-45deg);
+  background: #d9d8dd;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
