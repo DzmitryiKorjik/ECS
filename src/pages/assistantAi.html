@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Assistant AI</title>
+    <link rel="stylesheet" href="../css/ai_style/ai_styles.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/header.scss" />
+    <script src="../js/script.js"></script>
+  </head>
+  <body>
+    <!-- ________________________________________________________________________________ -->
+    <!-- ________________________________________________________________________________ -->
+    <!-- menu de gauche -->
+    <section id="sidebar"></section>
+    <!-- header -->
+    <div id="header" style="margin-left: 200px"></div>
+    <!-- ________________________________________________________________________________ -->
+    <!-- ________________________________________________________________________________ -->
+    <!-- corp de la page -->
+    <main class="main">
+      <!-- titre de la page -->
+      <h1 class="main__title">Assistant AI</h1>
+      <!-- sous titre -->
+      <h2 class="main__subtitle">
+        Votre plateforme collaborative d'apprentissage et d'entraide
+      </h2>
+      <!-- formulaire pour faire une recherche en local -->
+      <form class="main__form">
+        <input type="text" placeholder="Posez une question :" />
+        <button type="submit">Rechercher</button>
+      </form>
+      <div>
+        <h1 class="main__second-title">Interagissez avec votre assistant AI</h1>
+        <!-- sous titre -->
+        <h2 class="main__second-subtitle">
+          Choisissez votre assistant personnel parmi les options suivantes
+        </h2>
+      </div>
+      <!-- ________________________________________________________________________________ -->
+      <!-- ________________________________________________________________________________ -->
+      <!-- Bloc des assistants -->
+      <div class="main-content">
+        <section class="assistant">
+          <article class="assistant__item">
+            <div class="assistant__image">
+              <img src="../img/robo.png" alt="ChatGPT" />
+            </div>
+            <div class="assistant__content">
+              <p class="assistant__name">Chat GPT</p>
+              <button type="button" class="assistant__button">Lancer</button>
+            </div>
+          </article>
+
+          <article class="assistant__item">
+            <div class="assistant__image">
+              <img src="../img/claude-ai-icon.svg" alt="Claude" />
+            </div>
+            <div class="assistant__content">
+              <p class="assistant__name">Claude AI</p>
+              <button type="button" class="assistant__button">Lancer</button>
+            </div>
+          </article>
+
+          <article class="assistant__item">
+            <div class="assistant__image">
+              <img src="../img/mistral.webp" alt="Mistral" />
+            </div>
+            <div class="assistant__content">
+              <p class="assistant__name">Mistral AI</p>
+              <button type="button" class="assistant__button">Lancer</button>
+            </div>
+          </article>
+
+          <article class="assistant__item">
+            <div class="assistant__image">
+              <img src="../img/perplexity.svg" alt="Perplexity" />
+            </div>
+            <div class="assistant__content">
+              <p class="assistant__name">Perplexity</p>
+              <button type="button" class="assistant__button">Lancer</button>
+            </div>
+          </article>
+
+          <article class="assistant__item">
+            <div class="assistant__image">
+              <img src="../img/google.png" alt="Google" />
+            </div>
+            <div class="assistant__content">
+              <p class="assistant__name">Google</p>
+              <button type="button" class="assistant__button">Lancer</button>
+            </div>
+          </article>
+        </section>
+      </div>
+      <!-- ________________________________________________________________________________ -->
+      <!-- ________________________________________________________________________________ -->
+      <!-- Bloc du prompt -->
+      <div class="prompt-container">
+        <section class="prompt">
+          <h3 class="prompt__header">Prompts prédéfinis</h3>
+          <ul class="prompt__list">
+            <li class="prompt__item">
+              <span class="prompt__title"
+                >Explique un concept de base sur la médecine</span
+              >
+              <a
+                class="prompt__btn"
+                href="#"
+                data-prompt="Explique-moi un concept de manière simple."
+              >
+                Copier
+              </a>
+            </li>
+            <li class="prompt__item">
+              <span class="prompt__title"
+                >Explique-moi un concept sur le langage HTML</span
+              >
+              <a
+                class="prompt__btn"
+                href="#"
+                data-prompt="Explique-moi un concept sur le langage HTML"
+              >
+                Copier
+              </a>
+            </li>
+            <li class="prompt__item">
+              <span class="prompt__title"
+                >Explique-moi un concept sur le JavaScript</span
+              >
+              <a
+                class="prompt__btn"
+                href="#"
+                data-prompt="Explique-moi un concept sur le JavaScript"
+              >
+                Copier
+              </a>
+            </li>
+            <li class="prompt__item">
+              <span class="prompt__title"
+                >Explique-moi un concept sur le CSS</span
+              >
+              <a
+                class="prompt__btn"
+                href="#"
+                data-prompt="Explique-moi un concept sur le CSS"
+              >
+                Copier
+              </a>
+            </li>
+            <li class="prompt__item">
+              <span class="prompt__title"
+                >Explique-moi un concept sur le PHP</span
+              >
+              <a
+                class="prompt__btn"
+                href="#"
+                data-prompt="Explique-moi un concept sur le PHP"
+              >
+                Copier
+              </a>
+            </li>
+            <li class="prompt__item">
+              <span class="prompt__title"
+                >Explique-moi un concept sur le Java</span
+              >
+              <a
+                class="prompt__btn"
+                href="#"
+                data-prompt="Explique-moi un concept sur le Java"
+              >
+                Copier
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
