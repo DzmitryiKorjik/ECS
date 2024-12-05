@@ -1,0 +1,444 @@
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+// Variables
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+$primary-color: #dfdfdf;
+$secondary-color: #f5f5f7;
+$thirthly-color: 221f20;
+$background-dark: rgba(0, 0, 0, 0.7);
+$background-light: rgba(255, 255, 255, 0.1);
+$text-light: #ffffff;
+$text-laucher: rgba(0, 0, 0, 0.986);
+$text-dark: #333;
+$transition-speed: 0.3s;
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+// Mixins
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+// Transition
+@mixin transition($property: all, $speed: 0.3s, $easing: ease) {
+  transition: $property $speed $easing;
+}
+// __________________________________________________________________________________________________
+// Ombres
+@mixin box-shadow($color: rgba(0, 0, 0, 0.5), $spread: 15px) {
+  box-shadow: 0 4px $spread $color;
+}
+// __________________________________________________________________________________________________
+// Dégradé BG
+@mixin gradient-bg($start-color, $end-color) {
+  background: linear-gradient(90deg, $start-color, $end-color);
+}
+// __________________________________________________________________________________________________
+// Images assistant
+@mixin img-style(
+  $width: 100px,
+  $height: 100px,
+  $radius: 50%,
+  $border-width: 2px,
+  $border-color: $primary-color,
+  $padding: 10px,
+  $margin-bottom: 10px
+) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  border: $border-width solid $border-color;
+  padding: $padding;
+  margin-bottom: $margin-bottom;
+}
+// __________________________________________________________________________________________________
+// Bouton "lancer"
+@mixin assistant-button(
+  $background: $primary-color,
+  $hover-color: lighten($primary-color, 10%)
+) {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: $background;
+  color: $text-laucher;
+  cursor: pointer;
+  margin-top: 10px;
+  @include transition();
+  box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.9);
+
+  &:hover {
+    background: $hover-color;
+  }
+}
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+// Style card assistant
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+@mixin card-style(
+  $background: $background-dark,
+  $width: 150px,
+  $height: 240px,
+  $radius: 10px,
+  $padding: 20px,
+  $box-shadow-color: rgba(0, 0, 0, 0.5),
+  $box-shadow-spread: 15px
+) {
+  background: $background;
+  width: $width;
+  border-radius: $radius;
+  padding: $padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include box-shadow($box-shadow-color, $box-shadow-spread);
+  flex-wrap: wrap;
+  // Survol
+  &:hover {
+    transform: scale(1.1);
+    background: $thirthly-color;
+    cursor: pointer;
+  }
+}
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+// Style prompt
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+@mixin prompt-style(
+  $background: $background-dark,
+  $width: 300px,
+  $height: 150px,
+  $radius: 10px,
+  $padding: 20px,
+  $box-shadow-color: rgba(0, 0, 0, 0.5),
+  $box-shadow-spread: 15px,
+  $border-radius: 5px,
+  $border-width: 2px,
+  $border-color: $primary-color,
+  $margin-top: 20px
+) {
+  background: $background;
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  padding: $padding;
+  box-shadow: 0 2px $box-shadow-spread $box-shadow-color;
+  border: $border-width solid $border-color;
+  margin-top: $margin-top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    background: $thirthly-color;
+    cursor: pointer;
+  }
+}
+
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+// Style texte
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+//  Titre principale
+@mixin text-style(
+  $text-align: center,
+  $font-size: 1.2em,
+  $font-weight: bold,
+  $color: $text-light
+) {
+  text-align: $text-align;
+
+  p {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+  }
+}
+// __________________________________________________________________________________________________
+// Deuxième titre
+@mixin second__text-style(
+  $font-size: 1em,
+  $color: $text-light,
+  $font-weight: bold,
+  $text-align: center
+) {
+  text-align: $text-align;
+}
+// __________________________________________________________________________________________________
+//  Noms des assistants
+@mixin name-assistant(
+  $font-size: 1.2em,
+  $font-weight: bold,
+  $text-align: center,
+  $color: $text-light
+) {
+  text-align: $text-light;
+}
+// __________________________________________________________________________________________________
+//  texte lancer
+@mixin text-laucher(
+  $text-align: center,
+  $font-size: 1.2em,
+  $font-weight: bold,
+  $color: $text-laucher
+) {
+  text-align: $text-align;
+
+  p {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+  }
+}
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+// Body
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+body {
+  //   background-image: url("../img/ecf_body5.webp");
+  background-color: #221f20;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+// Main
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+.main {
+  margin-top: 2px;
+  margin-left: 200px;
+  padding: 20px;
+  min-height: 900px;
+  // __________________________________________________________________________________________________
+  // Titre principale
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 3em;
+    text-align: center;
+    color: $text-light;
+    text-shadow: 5px 5px 18px rgba(0, 0, 0, 0.9);
+  }
+  // __________________________________________________________________________________________________
+  // Second titre
+  &__subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 5px 5px 18px rgba(0, 0, 0, 0.9);
+  }
+  // __________________________________________________________________________________________________
+  // Titre principale assistant
+  &__second-title {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 150px;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 3em;
+    text-align: center;
+    color: $text-light;
+    text-shadow: 5px 5px 18px rgba(0, 0, 0, 0.9);
+  }
+  // __________________________________________________________________________________________________
+  // Second titre assistant
+  &__second-subtitle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 5px 5px 18px rgba(0, 0, 0, 0.9);
+  }
+  // __________________________________________________________________________________________________
+  // Zone texte question local
+  &__form {
+    margin: 20px auto;
+    text-align: center;
+
+    input {
+      padding: 10px;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 1em;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 5px 5px 18px rgba(0, 0, 0, 0.9);
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+    }
+    // __________________________________________________________________________________________________
+    // Bouton rechercher
+    button {
+      @include assistant-button();
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+// Assistant Section
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+.assistant {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 2400px;
+  // __________________________________________________________________________________________________
+  // cadre total d'un assistant
+  &__item {
+    @include card-style();
+    position: relative;
+    // __________________________________________________________________________________________________
+    // Image normale
+    .assistant__image img {
+      @include img-style();
+      filter: none;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    // __________________________________________________________________________________________________
+    //  Image sepia survol
+    &:hover {
+      .assistant__image img {
+        filter: sepia(100%);
+        opacity: 0.8;
+      }
+      // __________________________________________________________________________________________________
+      // Change la couleur du bouton "Lancer"
+      .assistant__button {
+        background: lighten($secondary-color, 10%);
+        color: $text-dark;
+        transition: background 0.3s ease, color 0.3s ease;
+      }
+    }
+    // __________________________________________________________________________________________________
+    // Réduire les autres items et garder les autres coloré
+    &:hover {
+      .assistant__image img {
+        transform: scale(1.1);
+        filter: sepia(100%);
+        opacity: 0.8;
+        transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+      }
+    }
+  }
+  // __________________________________________________________________________________________________
+  // Text des boutons assistant
+  &__content {
+    @include text-style();
+  }
+  // __________________________________________________________________________________________________
+  //  Nom des assistants
+  &__name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $text-light;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  // __________________________________________________________________________________________________
+  //  Bouton lancer des assistants
+  &__button {
+    @include assistant-button();
+  }
+}
+
+.main-content {
+  flex: 1; /* Prend tout l'espace disponible à gauche */
+  display: flex;
+  flex-direction: column;
+}
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+// Prompt section
+// __________________________________________________________________________________________________
+// __________________________________________________________________________________________________
+.prompt-container {
+  width: 300px;
+  height: 100%;
+  background-color: #1e1e1e;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+.prompt {
+  max-width: 300px;
+}
+
+.prompt__header {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #dfdfdf;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.prompt__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.prompt__item {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.prompt__title {
+  color: #ffffff;
+  font-size: 1em;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.prompt__btn {
+  background-color: #dfdfdf;
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c0c0c0;
+  }
+}

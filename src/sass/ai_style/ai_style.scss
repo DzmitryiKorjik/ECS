@@ -1,0 +1,229 @@
+// Variables
+$primary-color: #4e73df;
+$secondary-color: #ec5d0a;
+$background-dark: rgba(0, 0, 0, 0.7);
+$background-light: rgba(255, 255, 255, 0.1);
+$text-light: #ffffff;
+$text-dark: #333;
+$transition-speed: 0.3s;
+
+// Mixins
+@mixin transition($property: all, $speed: 0.3s, $easing: ease) {
+  transition: $property $speed $easing;
+}
+
+@mixin box-shadow($color: rgba(0, 0, 0, 0.5), $spread: 15px) {
+  box-shadow: 0 4px $spread $color;
+}
+
+@mixin gradient-bg($start-color, $end-color) {
+  background: linear-gradient(90deg, $start-color, $end-color);
+}
+
+// Global Styles
+body {
+  background-image: url("../img/ecf_body5.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// Components
+.main {
+  &__title {
+    margin-top: 50px;
+    font-size: 72px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    color: $text-light;
+    text-align: center;
+    animation: bounce 1s infinite alternate;
+  }
+
+  &__subtitle {
+    margin-top: 10px;
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+  }
+
+  &__topbar,
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+  }
+
+  &__topbar_item {
+    width: 200px;
+    min-height: 250px;
+    background: $background-dark;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    @include box-shadow(rgba(0, 0, 0, 0.2), 15px);
+    @include transition(transform, $transition-speed);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+      transform: translateY(-10px);
+      border-color: $secondary-color;
+    }
+
+    img {
+      max-width: 60px;
+      margin: 10px 0;
+      background: $text-light;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      @include box-shadow(rgba(0, 0, 0, 0.2), 8px);
+
+      &:hover {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+        @include transition(transform, $transition-speed);
+      }
+    }
+
+    .main__topbar_title {
+      font-size: 18px;
+      font-weight: bold;
+      color: $text-light;
+      background: $background-dark;
+      padding: 5px 10px;
+      border-radius: 8px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+      @include transition(transform, $transition-speed);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+// Assistant Section
+.assistant {
+  &__btn {
+    @include gradient-bg($primary-color, $secondary-color);
+    color: $text-light;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    @include box-shadow(rgba(0, 0, 0, 0.2), 15px);
+    @include transition(all, $transition-speed);
+
+    &:hover {
+      @include gradient-bg($secondary-color, $primary-color);
+      transform: scale(1.1);
+    }
+  }
+
+  &__section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: $background-dark;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    @include box-shadow(rgba(0, 0, 0, 0.2), 15px);
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    @include transition(opacity, $transition-speed);
+
+    &.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .assistant__back {
+      background: $background-dark;
+      color: $text-light;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .main {
+    &__topbar,
+    &__bottom {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    &__topbar_item {
+      width: 90%;
+    }
+  }
+}
