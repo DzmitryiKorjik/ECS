@@ -1,115 +1,59 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  &::before, &::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-}
-
-html {
-  font-size: 100%;
-  scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-  font-family: Arial, sans-serif;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-*:focus {
-  color: rgb(75, 73, 73);
-  outline: none;
-}
-
-*:blur {
-  color: rgb(75, 73, 73);
-}
-
-ul, ol {
-  list-style: none;
-}
-
 .sidebar {
-  height: 100vh;
-  width: 200px;
-  background: #2f2e339c;
-  color: #DAD5D5;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: fixed;
-  backdrop-filter: blur(22px);
-  &__logo {
-    font-size: 20px;
-    font-weight: 400;
-    padding: 32px 50px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #F5F5F7;
+
+  & a {
+    display: block;
+
+    &:first-child .sidebar__item {
+      border-top-right-radius: 15px;
+    }
+
+    &:last-child .sidebar__item {
+      border-bottom-right-radius: 15px;
+    }
   }
-  /*Sidebar menu*/
-  &__menu {
-    padding: 0 0 0 17px;
-    flex-grow: 1;
-    flex-wrap: wrap;
-  }
-  /*Sidebar ligne de menu*/
+
   &__item {
-    font-size: 16px;
-    padding: 12px 5px 12px 5px;
-    &:hover {
-      color: #3f3f41;
-      transition: all 0.3s ease;
-    }    
-    &_link {
-      display: flex;
-      align-items: middle;
-      font-size: 14px;
-    }
-    
-    &_img {
-      margin: 0 5px 0 0;
-      width: 16px;
-      height: 16px;
-    }   
-  }  
-  /*Sidebar profil*/
-  &__profil {
-    background: #414653;
-    height: 50px;
-    padding: 5px 0 5px 15px;
     display: flex;
-    align-items: center;
+    position: relative;
+    padding: 10px;
+    background: #221F20;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+
+      & .sidebar__item_text {
+        display: block;
+      }
+    }
+
+    &_text {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 70px;
+      transform: translateY(-50%);
+      background-color: #221F20;
+      font-size: 24px;
+      padding: 0 5px;
+      border-radius: 5px;
+    }
+
     &_img {
-      margin: 0 15px 0 0;
-    }
-    
-    &_title {
-      font-size: 14px;
-    }
-    
-    &_subtitle {
-      font-size: 12px;
+      width: 48px;
+      height: 48px;
     }
   }
 }
+
 
 @media (min-width: 1326px) and (max-width: 1460px) {
 
@@ -122,86 +66,12 @@ ul, ol {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .sidebar {
-        left: -200px; 
-        &__logo {
-        font-size: 22px;
-        font-weight: 500;
-        left: 50px;
-        position: relative;
-        }
-        &__item {
-        &_link {
-            font-size: 20px;
-            font-weight: 600;
-        }
-        &_img {
-            width: 30px;
-            height: 30px;
-            margin-right: 5px;
-        }
-        }
-        &.active {
-        width: 300px;
-        left: 0px;
-        z-index: 1;
-        transition: all 0.3s ease;
-        }
-        &__profil {
-          height: 80px;
-          align-items: center;
-          &_text {
-            font-size: 20px;
-            font-weight: 500;
-          }
-          &_title {
-            font-size: 25px;
-            font-weight: 500;
-          }
-        }
-    }
+   
 }
 
 @media (max-width: 767px) {
-  .sidebar {
-    left: -200px; 
-    &__logo {
-    font-size: 22px;
-    font-weight: 500;
-    left: 50px;
-    position: relative;
-    }
-    &__item {
-    &_link {
-        font-size: 20px;
-        font-weight: 600;
-    }
-    &_img {
-        width: 30px;
-        height: 30px;
-        margin-right: 5px;
-    }
-    }
-    &.active {
-    width: 300px;
-    left: 0px;
-    z-index: 1;
-    transition: all 0.3s ease;
-    }
-    &__profil {
-      height: 80px;
-      align-items: center;
-      &_text {
-        font-size: 20px;
-        font-weight: 500;
-      }
-      &_title {
-        font-size: 25px;
-        font-weight: 500;
-      }
-    }
-  }
 }
 
 @media (max-width: 480px) {
 }
+
