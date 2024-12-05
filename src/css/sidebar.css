@@ -37,9 +37,10 @@
   left: 70px;
   transform: translateY(-50%);
   background-color: #221F20;
-  font-size: 24px;
+  font-size: 16px;
   padding: 0 5px;
   border-radius: 5px;
+  color: #F5F5F7;
 }
 .sidebar__item_img {
   width: 48px;
