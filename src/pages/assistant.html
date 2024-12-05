@@ -5,24 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assistant AI</title>
     <link rel="stylesheet" href="../css/ai_style.css" />
-    <style>
-      .return-button {
-        position: fixed;
-        top: 20px;
-        left: 200px;
-        background-color: #ffffff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        font-size: 16px;
-        text-decoration: none;
-        color: #333;
-        transition: background-color 0.3s ease;
-      }
-      .return-button:hover {
-        background-color: #f0f0f0;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/header.scss">
+    <script src="../js/script.js"></script>
   </head>
   <body>
     <!-- <div class="return-button">
@@ -261,15 +246,15 @@
           </div>
         </div>
         <div class="assistant">
-          <div id="chatgpt" class="assistant__section">
+          <div id="chatgpts" class="assistant__section">
             <button class="assistant__back">Retour</button>
             <h3>ChatGPT</h3>
             <textarea
-              id="input-chatgpt"
+              id="input-chatgpts"
               class="assistant__input"
               placeholder="Posez une question..."
             ></textarea>
-            <button id="send-chatgpt" class="assistant__btn">Envoyer</button>
+            <button id="send-chatgpts" class="assistant__btn">Envoyer</button>
             <div id="response-chatgpt" class="assistant__response"></div>
           </div>
         </div>
@@ -309,18 +294,18 @@
             id="who-ai-is"
             name="who-ai-is"
           /><!-- Fenêtre contextuelle pour l'historique avec retour -->
-          <div class="modal" id="history-modal">
+          <div class="modal" id="history-modals">
             <div class="modal-content">
-              <span class="close-button" id="close-history-button"
+              <span class="close-button" id="close-history-buttons"
                 >&times;</span
               >
               <button id="back-to-settings-from-history">Retour</button>
               <h2>Historique</h2>
-              <div id="history-content">
+              <div id="history-contents">
                 <!-- Historique des conversations affiché ici -->
               </div>
-              <button id="download-history">Télécharger</button>
-              <button id="confirm-delete-history">
+              <button id="download-historys">Télécharger</button>
+              <button id="confirm-delete-historys">
                 Confirmer la suppression
               </button>
             </div>

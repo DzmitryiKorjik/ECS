@@ -1,30 +1,37 @@
-"use strict";
-
 document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.header__dropdown-toggle');
-  const menu = document.querySelector('.header__dropdown-menu');
+    const fileInput = document.getElementById('fileInput');
+    const fileBtn = document.querySelector('.file__btn');
+    const fileList = document.querySelector('.file-list');
 
-  toggle.addEventListener('click', (event) => {
-      event.preventDefault(); 
-      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-     
-      toggle.setAttribute('aria-expanded', !isExpanded);
-   
-      if (isExpanded) {
-          menu.style.display = 'none';
-      } else {
-          menu.style.display = 'block';
-      }
-  });
+    // Ouvrez la fenêtre de sélection des fichiers en cliquant sur le bouton
+    fileBtn.addEventListener('click', () => {
+        fileInput.click();
+    });
 
-  document.addEventListener('click', (event) => {
-      if (!toggle.contains(event.target) && !menu.contains(event.target)) {
-          menu.style.display = 'none';
-          toggle.setAttribute('aria-expanded', 'false');
-      }
-  });
+    // Traitement des fichiers sélectionnés
+    fileInput.addEventListener('change', (event) => {
+        const files = event.target.files;
+
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+
+            // Créer un élément de liste pour un fichier
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <span>${file.name}</span>
+                <button class="delete-btn">Delete</button>
+            `;
+
+            // Ajouter un gestionnaire pour le bouton de suppression
+            listItem.querySelector('.delete-btn').addEventListener('click', () => {
+                listItem.remove();
+            });
+
+            // Ajouter un élément à la liste
+            fileList.appendChild(listItem);
+        }
+
+        // Effacer fileInput pour que les mêmes fichiers puissent être téléchargés à nouveau
+        fileInput.value = '';
+    });
 });
-
-
-
-

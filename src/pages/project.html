@@ -3,49 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/project.css">
     <title>Project</title>
+    <link rel="stylesheet" href="../css/project.css">
 </head>
 <body>
-    <section class="header">
-        <div class="header__dropdown">
-            <div class="header__dropdown-toggle" role="button">
-                <img src="../icons/menu-alt-2-svgrepo-com.svg" alt="menu">
+    <header>
+
+    </header>
+    <aside>
+
+    </aside>
+
+    <main>
+        <div class="wrapper">
+            <div class="project">
+                <div class="title">
+                    <img src="../icons/profile-round-1345-svgrepo-com.svg" alt="profile" class="icon">
+                    <div class="user__name">UserName</div>
+                    <button class="file__btn">Add file</button>
+                    <input type="file" id="fileInput" multiple style="display: none;">
+                </div>
+                <hr>
+                <ul class="file-list">
+                    <!-- Les fichiers téléchargés s'affichent ici -->
+                </ul>
             </div>
-            <ul class="header__dropdown-menu" style="display: none;">
-                <li><a class="header__dropdown-item" href="./index.html" target="_blank">Accueil</a></li>
-                <li><a class="header__dropdown-item" href="./teams.html" target="_blank">Groupes & Discussions</a></li>
-                <li><a class="header__dropdown-item" href="./assistant.html" target="_blank">Assistance AI</a></li>
-                <li><a class="header__dropdown-item" href="./documentation.html" target="_blank">Documentation</a></li>
-            </ul>
-        </div>
-        <div class="header__title">
-            <img src="../icons/web-development-svgrepo-com.svg" alt="DevWeb">
-            DevCollad</div>
-       
-        <div class="header__search">
-            <form class="header__search-form" action="/search" method="get" role="search" aria-label="Site search">
-                <input
-                  class="header__input-search"
-                  type="search"
-                  name="rechercher"
-                  id="search-input"
-                  placeholder="Rechercher..."
-                  aria-label="Recherche">
-            </form>
-        </div>
-        <div class="header__items">
-            <div class="header__items-alarm">
-                <a href="./libs/notification.html"><img src="../icons/notification-svgrepo-com.svg" alt="notification"></a>
-            </div>
-            <div class="header__items-message">
-                <a href="./libs/message.html"><img src="../icons/message-circle-plus-svgrepo-com.svg" alt="chat"></a>
-            </div>
-            <div class="header__items-profil">
-                <a href="./libs/profil.html"><img src="../icons/profile-round-1345-svgrepo-com.svg" alt="profil"></a>
+            <div class="readme">
+                <div class="title">
+                    <img src="../icons/readme.svg" alt="readme">
+                    <div class="readme__title">README</div>
+                </div>
+                <hr>
+                <div class="readme__content">
+                    <img src="../icons/readme.svg" alt="readme">
+                    <div class="readme__content-descr">Add a README</div>
+                    <button class="readme__btn">Add a README</button>
+                </div>
             </div>
         </div>
-    </section>
+        
+    </main>
+
+    <footer>
+
+    </footer>
 
     <script src="../js/modules/project.js"></script>
 </body>
