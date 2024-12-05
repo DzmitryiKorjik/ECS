@@ -5,5 +5,102 @@
 }
 
 body {
-  background-image: url(/img/fond\ d\'écran\discussion.png);
+  background-image: url(/img/discussion_fond_écran.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  max-height: 900px;
+}
+
+.chat {
+  background: rgba(47, 46, 51, 0.95);
+  max-width: 340px;
+  height: 840px;
+  color: white;
+  margin: 0px 0px 50px 30px;
+  border-radius: 12px;
+  padding-bottom: 50px;
+}
+
+.recherche {
+  display: flex;
+}
+
+.recherche_nom {
+  margin: 20px 0px 0px 20px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 10px 40px 10px 10px;
+  max-height: 36px;
+}
+
+.add_conversation {
+  width: 36px;
+  height: 36px;
+  margin: 20px 0px 0px 10px;
+  background-color: white;
+}
+
+.conv {
+  margin-top: 30px;
+}
+
+.conv7 {
+  background-color: transparent;
+}
+
+.conv > article {
+  margin-top: 25px;
+  padding-left: 10px;
+  padding-top: 5px;
+  background-color: #635c5c;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.conv > article > h2 {
+  font-size: 22px;
+}
+
+.conv > article > p {
+  margin-top: 5px;
+  padding-bottom: 10px;
+}
+
+.slide {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: transparent;
+
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+}
+
+.fleche {
+  width: 30px;
+  height: 30px;
+}
+
+.ensemble {
+  background-color: #F5F5F5;
+  opacity: 100%;
+  display: flex;
+  margin-top: 50px;
+}
+
+.option {
+  background-color: grey;
+  display: flex;
+}
+
+.discussion {
+  height: 840px;
+  background-color: #635c5c;
+  border-radius: 12px;
 }
