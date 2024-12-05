@@ -9,6 +9,8 @@
 }
 .sidebar a {
   display: block;
+  text-decoration: none;
+  position: relative;
 }
 .sidebar a:first-child .sidebar__item {
   border-top-right-radius: 15px;
@@ -18,8 +20,7 @@
 }
 .sidebar__item {
   display: flex;
-  position: relative;
-  padding: 10px;
+  padding: 15px 0 15px 20px;
   background: #221F20;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -34,14 +35,16 @@
   display: none;
   position: absolute;
   top: 50%;
-  left: 70px;
+  left: 100%;
   transform: translateY(-50%);
   background-color: #221F20;
-  font-size: 24px;
+  font-size: 16px;
   padding: 0 5px;
-  border-radius: 5px;
+  color: #F5F5F7;
+  text-decoration: none;
 }
 .sidebar__item_img {
   width: 48px;
   height: 48px;
+  text-decoration: none;
 }/*# sourceMappingURL=sidebar.css.map */
