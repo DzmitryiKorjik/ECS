@@ -380,7 +380,7 @@ body {
 }
 // __________________________________________________________________________________________________
 // __________________________________________________________________________________________________
-// Prompt section
+// Prompt Section
 // __________________________________________________________________________________________________
 // __________________________________________________________________________________________________
 .prompt-container {
@@ -395,50 +395,52 @@ body {
   right: 0;
   top: 0;
   overflow-y: auto;
-}
 
-.prompt {
-  max-width: 300px;
-}
+  // Header des prompts
+  &__header {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 10px;
+    text-align: right;
+  }
 
-.prompt__header {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #dfdfdf;
-  margin-bottom: 10px;
-  text-align: right;
-}
+  // Liste des prompts
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-.prompt__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  // Élément d'un prompt
+  &__item {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-color: red;
+  }
 
-.prompt__item {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
+  // Titre du prompt
+  &__title {
+    color: $text-light;
+    font-size: 1em;
+    margin-bottom: 5px;
+    text-align: right;
+  }
 
-.prompt__title {
-  color: #ffffff;
-  font-size: 1em;
-  margin-bottom: 5px;
-  text-align: right;
-}
+  // Bouton copier du prompt
+  &__btn {
+    background-color: $primary-color;
+    color: $text-dark;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    @include transition();
 
-.prompt__btn {
-  background-color: #dfdfdf;
-  color: #000;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9em;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #c0c0c0;
+    &:hover {
+      background-color: lighten($primary-color, 10%);
+    }
   }
 }
