@@ -1,13 +1,13 @@
 .head {
   display: flex;
-  background: #221F20;
+  background: #221f20;
   padding: 30px 160px;
   justify-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
 }
 .head a {
-  color: #F5F5F7;
+  color: #f5f5f7;
   text-decoration: none;
 }
 .head__logo:hover {
@@ -19,7 +19,7 @@
 }
 .head__search_form {
   font-size: 18px;
-  color: #221F20;
+  color: #221f20;
   font-weight: 600;
   padding: 5px 5px 5px 10px;
   border-radius: 10px;
@@ -70,4 +70,4 @@
   .head__search {
     display: none;
   }
-}/*# sourceMappingURL=header.css.map */
+} /*# sourceMappingURL=header.css.map */
