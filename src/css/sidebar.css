@@ -5,7 +5,7 @@
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  color: #F5F5F7;
+  color: #f5f5f7;
 }
 .sidebar a {
   display: block;
@@ -21,7 +21,7 @@
 .sidebar__item {
   display: flex;
   padding: 15px 0 15px 20px;
-  background: #221F20;
+  background: #221f20;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -37,14 +37,14 @@
   top: 50%;
   left: 100%;
   transform: translateY(-50%);
-  background-color: #221F20;
+  background-color: #221f20;
   font-size: 16px;
   padding: 0 5px;
-  color: #F5F5F7;
+  color: #f5f5f7;
   text-decoration: none;
 }
 .sidebar__item_img {
   width: 48px;
   height: 48px;
   text-decoration: none;
-}/*# sourceMappingURL=sidebar.css.map */
+} /*# sourceMappingURL=sidebar.css.map */
