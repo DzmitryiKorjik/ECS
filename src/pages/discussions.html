@@ -4,27 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/discussion.css">
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
+  <link rel="stylesheet" href="../css/discussions.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <script src="../js/script.js"></script>
-  <title>Discussion</title>
+  <title>Discussions</title>
 </head>
 
 <body>
-  <section id="sidebar"></section>
-  <main class="main">
+  <header>
     <div id="header"></div>
+</header>
+<aside>
+    <div id="sidebar"></div>
+</aside>
+  <main class="main">
     <section class="ensemble">
       <section class="chat">
         <article class="recherche">
           <label for="label_nom"></label>
           <input class="recherche_nom" type="text" name="recherche_nom"
             placeholder="Entrez votre recherche ici ..."></input>
-          <a href="/icons/message.png" class="add_conversation"><img src="/icons/message.png" alt="icone_image"></a>
+          <a href="/src/icons/message.png" class="add_conversation"><img src="/src/icons/message.png" alt="icone_image"></a>
         </article>
         <section class="conv">
           <article class="conv1">
@@ -72,6 +78,7 @@
       </section>
     </section>
   </main>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>
