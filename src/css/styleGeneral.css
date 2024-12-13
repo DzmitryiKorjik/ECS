@@ -23,3 +23,15 @@ img {
     max-width: 100%;      
     margin: 0;
 }
+:root {
+    --color-light: #F5F5F7;
+    --color-dark: #221F20;
+}
+
+body {
+  background-color: var(--color-dark);
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
