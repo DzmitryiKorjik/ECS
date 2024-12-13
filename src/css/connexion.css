@@ -100,7 +100,7 @@ body {
   padding: 20px;
 }
 
-span {
+.register-link_item {
   margin-left: 5px;
   height: 20px;
   border-radius: 10px;
@@ -109,6 +109,11 @@ span {
     rgb(196, 196, 196),
     rgba(196, 196, 196, 0) 100%
   );
+}
+
+.register-link_item a {
+  color: white;
+  text-decoration: none;
 }
 
 footer {
