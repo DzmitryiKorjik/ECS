@@ -1,131 +1,39 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  &::before, &::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-}
-
-html {
-  font-size: 100%;
-  scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-  font-family: Arial, sans-serif;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-*:focus {
-  color: rgb(75, 73, 73);
-  outline: none;
-}
-
-*:blur {
-  color: rgb(75, 73, 73);
-}
-
-ul, ol {
-  list-style: none;
-}
-
 .head {
   display: flex;
-  background: #5b78a379;
-  padding: 30px 155px;
+  background: #221F20;
+  padding: 30px 160px;
   justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+
+  & a {
+    color: #F5F5F7;
+    text-decoration: none;
+  }
 
   &__logo {
-    display: flex;
-    color: #000000;
-    font-size: 20px;
-    font-weight: 400;
-    padding: 0 30px 0 0;
+    &:hover {
+      color: #e49329;
+      transition: all 0.3s ease;
+    }
+    &_accolade {
+      color: #808080;    
+    }
+  }
+ 
+  &__search {
+    &_form {
+      font-size: 18px;
+      color: #221F20;
+      font-weight: 600;
+      padding: 5px 5px 5px 10px;
+      border-radius: 10px;
+      border: none;
+    }
   }
 
-  &__rightpart, &__leftpart {
-    display: flex;
+
   }
-
-  &__alarm, &__message {
-    padding: 0 30px 0 0;
-  }
-
-  &__search_form {
-    border-radius: 10px;
-    border: #9D9CA5;
-    padding: 0 0 0 12px;
-  }
-}
-
-.burger {
-  display: none;
-  position: relative;
-  top: 13px;
-  left: -15px;
-  height: 2px;
-  width: 20px;
-  background: #9d9ca5;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    width: 20px;
-    background: #9d9ca5;
-    transition: transform 0.3s ease, top 0.3s ease;
-  }
-
-  &::before {
-    top: -5px;
-  }
-
-  &::after {
-    top: 5px;
-  }
-
-  &.active {
-    height: 0px;
-  }
-
-  &.active::before {
-    top: 3px;
-    left: 0;
-    transform: rotate(45deg);
-    background: #D9D8DD;
-    transition: all 0.3s ease;
-  }
-
-  &.active::after {
-    top: 3px;
-    left: 0;
-    transform: rotate(-45deg);
-    background: #D9D8DD;
-    transition: all 0.3s ease;
-  }
-}
-
 @media (min-width: 1200px) and (max-width: 1325px) {
   .head {
     padding: 30px 80px;
