@@ -56,7 +56,7 @@ body {
   width: 100%;
   font-family: 'Roboto', sans-serif;
   flex-direction: column;
-  background: #3d3434;
+  background: #221F20;
 }
 
 /*Partie cenral*/
@@ -89,7 +89,7 @@ body {
     }
     &_item {
       padding: 15px 0 50px 15px;
-      background: rgba(0, 0, 0, 0.4); 
+      background: #F5F5F7; 
       border-radius: 10px;
       border: 2px solid rgba(0, 0, 0, 0.2);
       flex-grow: 1;
@@ -112,14 +112,14 @@ body {
     }
 
     &_title {
-      color: #f2f1f5;
+      color: #221F20;
       font-size: 14px;
     }
     
     &_subtitle {
       font-weight: 500;
       font-size: 30px;
-      color: #f2f1f5;
+      color: #221F20;
     }
   }
 
@@ -130,7 +130,7 @@ body {
   }
   
   &__principal {
-    background: rgba(0, 0, 0, 0.4); 
+    background: #F5F5F7; 
     border-radius: 10px;
     flex-grow: 1;
     margin: 0 32px 0 0;
@@ -168,20 +168,20 @@ body {
 
       &_title {
         margin: 0 15px 0 0;
-        color: #ffffff;
+        color: #221F20;
       }
       &_subtitle {
         flex-grow: 1;
       }
       &__time {
-        color: #9D9CA5;
+        color: #221F20;
       }
     }
   }
   
   &__sidebar {
     width: 380px;
-    background: rgba(0, 0, 0, 0.4); 
+    background: #F5F5F7; 
     border-radius: 10px;
     padding: 20px;
     }  
@@ -201,7 +201,7 @@ body {
       text-align: left;
       padding: 15px;
       border-radius: 10px;
-      background: #4e4e4e69;
+      border: #221F20 1px solid;
       margin: 20px;
       &:hover {
         transform: scale(1.02);
@@ -233,7 +233,7 @@ body {
   color: #FFFFFF;
   &__contacts {
     &:hover {
-      color: #f0f0f0;
+      color: #939396;
       transition: all 0.3s ease;
     }
   }

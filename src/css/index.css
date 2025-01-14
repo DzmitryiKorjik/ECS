@@ -54,7 +54,7 @@ body {
   width: 100%;
   font-family: "Roboto", sans-serif;
   flex-direction: column;
-  background: #3d3434;
+  background: #221F20;
 }
 
 /*Partie cenral*/
@@ -85,7 +85,7 @@ body {
 }
 .main__topbar_item {
   padding: 15px 0 50px 15px;
-  background: rgba(0, 0, 0, 0.4);
+  background: #F5F5F7;
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   flex-grow: 1;
@@ -105,13 +105,13 @@ body {
   margin: 0 10px 0 0;
 }
 .main__topbar_title {
-  color: #f2f1f5;
+  color: #221F20;
   font-size: 14px;
 }
 .main__topbar_subtitle {
   font-weight: 500;
   font-size: 30px;
-  color: #f2f1f5;
+  color: #221F20;
 }
 .main__corps {
   display: flex;
@@ -119,7 +119,7 @@ body {
   margin-top: 42px;
 }
 .main__principal {
-  background: rgba(0, 0, 0, 0.4);
+  background: #F5F5F7;
   border-radius: 10px;
   flex-grow: 1;
   margin: 0 32px 0 0;
@@ -157,17 +157,17 @@ body {
 }
 .main__principal_item_title {
   margin: 0 15px 0 0;
-  color: #ffffff;
+  color: #221F20;
 }
 .main__principal_item_subtitle {
   flex-grow: 1;
 }
 .main__principal_item__time {
-  color: #9D9CA5;
+  color: #221F20;
 }
 .main__sidebar {
   width: 380px;
-  background: rgba(0, 0, 0, 0.4);
+  background: #F5F5F7;
   border-radius: 10px;
   padding: 20px;
 }
@@ -183,7 +183,7 @@ body {
   text-align: left;
   padding: 15px;
   border-radius: 10px;
-  background: rgba(78, 78, 78, 0.4117647059);
+  border: #221F20 1px solid;
   margin: 20px;
 }
 .main__event_item:hover {
@@ -210,7 +210,7 @@ body {
   color: #FFFFFF;
 }
 .footer__contacts:hover {
-  color: #f0f0f0;
+  color: #939396;
   transition: all 0.3s ease;
 }
 .footer__rights {
