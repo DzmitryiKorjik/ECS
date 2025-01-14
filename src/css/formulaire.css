@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main,
+footer {
+  min-width: 1200px;
+}
+
+body {
+  background: #221f20;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Ombre douce */
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  animation: fadeIn 1s ease-in-out;
+  transform: scale(0.95);
+  transition: transform 0s ease, box-shadow 0.3s ease;
+}
+
+.main-container:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7); /* Ombre légèrement plus épaisse */
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #222; /* Fond des champs */
+  color: #fff; /* Texte blanc */
+  box-sizing: border-box;
+  margin-top: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #ccc;
+  outline: none;
+  box-shadow: 0 0 10px white;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 40px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #ccc;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+footer {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

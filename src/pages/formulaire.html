@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/formulaire.css" />
+    <title>Inscription - Formulaire - DevCollab</title>
+  </head>
+  <body>
+    <header>
+      <div id="header"></div>
+    </header>
+    <aside>
+      <div id="sidebar"></div>
+    </aside>
+    <main class="main-content">
+      <div class="main-container">
+        <h1 class="title">Formulaire d'inscription</h1>
+        <form class="form-container" action="index.html" method="post">
+          <div class="form-group">
+            <label for="nom">Nom d'utilisateur</label>
+            <input type="text" id="nom" name="nom" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" tname="email" required />
+          </div>
+          <div class="form-group">
+            <label for="motDePasse">Mot de passe</label>
+            <input type="password" id="motDePasse" name="password" />
+            <span toggle="#motDePasse" class="toggle-password">
+              <i class="fa fa-eye"></i>
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="confirmationMotDePasse"
+              >Confirmation du mot de passe</label
+            >
+            <input
+              type="password"
+              id="confirmationMotDePasse"
+              name="confirmationPassword"
+            />
+          </div>
+          <!-- creer un input avec une liste deroulante-->
+          <div class="form-group">
+            <label for="role">Selection du role</label>
+            <select id="role" name="role">
+              <option value="admin">Admin</option>
+              <option value="user">Utilisateur</option>
+            </select>
+          </div>
+          <!--creation du bouton creation de compte-->
+          <div class="form-group">
+            <button type="submit">Créer le compte</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>Contacts</p>
+      <p>All right reserved</p>
+      <p>Aide</p>
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

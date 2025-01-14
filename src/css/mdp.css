@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main,
+footer {
+  min-width: 1200px;
+}
+
+body {
+  background: #221f20;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.reset-container {
+  background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+  padding: 70px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre douce */
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reset-title {
+  font-size: 30px;
+  color: #fff; /* Texte blanc */
+  margin-bottom: 40px;
+}
+
+.reset-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Texte de description */
+.reset-description {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 50px;
+  margin-top: 70px;
+  line-height: 1.8;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-group label {
+  display: block;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+input[type="email"] {
+  width: 85%;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #444; /* Bordure sombre */
+  border-radius: 5px;
+  background-color: #222; /* Fond sombre */
+  color: #fff; /* Texte blanc */
+  font-size: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #ccc; /* Bordure en bleu au focus */
+  outline: none;
+  box-shadow: 0 0 8px #ccc;
+}
+
+.reset-button {
+  padding: 20px;
+  margin-top: 55px;
+  margin-left: 15px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 95%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button:hover {
+  background-color: #ccc;
+}
+
+footer {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+  padding-top: 10px;
+}
+
+footer p {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10px;
+  font-size: 14px;
+}

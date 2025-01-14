@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main,
+footer {
+  min-width: 1200px;
+}
+
+body {
+  min-height: 100vh;
+  background: #221f20;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.profile-container:hover {
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.avatar img {
+  width: 200px;
+  height: 200px;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.avatar {
+  padding: 10px;
+}
+
+.avatar img:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.user-info {
+  margin-left: 30px;
+  margin-bottom: 50px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.username {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.role,
+.job {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.activites {
+  grid-column: span 1;
+}
+
+.skills {
+  grid-column: span 1;
+}
+.block {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.block:hover {
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+}
+
+.block h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: black;
+}
+
+.block p,
+.block ul {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.block ul li {
+  padding-left: 20px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.block ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: black;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Espacement entre les compétences */
+}
+
+.icon {
+  width: 24px; /* Taille des icônes */
+  height: 24px;
+  margin-right: 10px; /* Espace entre l'icône et le texte */
+  border-radius: 4px; /* Facultatif : arrondi pour les icônes */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+footer {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

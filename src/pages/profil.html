@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/profil.css" />
+    <title>Profil - DevCollab</title>
+  </head>
+  <body>
+    <header>
+      <div id="header"></div>
+    </header>
+    <aside>
+      <div id="sidebar"></div>
+    </aside>
+    <main class="profile-container">
+      <!-- Section en haut avec avatar et informations utilisateur -->
+      <div class="profile-header">
+        <div class="avatar">
+          <img src="../img/profil-dev.webp" alt="Avatar de l'utilisateur" />
+          <!--l'utilisateur peut changer de photo de profil-->
+        </div>
+        <div class="user-info">
+          <h1 class="username">Nom d'Utilisateur</h1>
+          <p class="job">Developpeur Web</p>
+          <p class="role">Rôle : Administrateur</p>
+        </div>
+      </div>
+      <!-- Section avec les 4 blocs -->
+      <div class="profile-content">
+        <!-- Bloc Coordonnées -->
+        <div class="block coordinates">
+          <h2>Coordonnées</h2>
+          <p><strong>Nom :</strong> Dupont</p>
+          <p><strong>Prénom :</strong> Jean</p>
+          <p><strong>Email :</strong> jean.dupont@example.com</p>
+          <p><strong>Ville :</strong> Paris</p>
+        </div>
+        <!-- Bloc À propos de moi -->
+        <div class="block about">
+          <h2>À propos de moi</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <!-- Bloc Compétences -->
+        <div class="block skills">
+          <h2>Compétences</h2>
+          <ul>
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
+                alt="html"
+                class="icon"
+              />
+              HTML
+            </li>
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
+                alt="css"
+                class="icon"
+              />
+              CSS
+            </li>
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                alt="javascript"
+                class="icon"
+              />
+              JavaScript
+            </li>
+            <li>
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                alt="php"
+                class="icon"
+              />PHP
+            </li>
+          </ul>
+        </div>
+        <!-- Bloc Activités récentes -->
+        <div class="block activities">
+          <h2>Activités Récentes</h2>
+          <ul>
+            <li>Mise à jour de projet React - Nouvelle version déployée</li>
+            <li>Participation à une discussion sur le forum</li>
+            <li>Ajout d'un article de blog</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Contacts</p>
+      <p>All right reserved</p>
+      <p>Aide</p>
+    </footer>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
